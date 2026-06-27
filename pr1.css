@@ -1,0 +1,12 @@
+body{
+    font-family:Arial,sans-serif;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: gray;
+opacity: 0.6;
+}
+.deleteBtn{
+    margin-left:10px;
+}

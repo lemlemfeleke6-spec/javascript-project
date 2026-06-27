@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter app</title>
+    <link rel="stylesheet" href="counter.css">
+</head>
+<body>
+    <h1>Counter App</h1>
+    <h1 id="display"></h1>
+    <div id="container">
+        
+   <button class="InputincBtn" id="inc">Increase</button>
+    <button class="InputresBtn" id="res">reset</button>
+    <button class="InputdecBtn" id="dec">Decrease</button>       
+    </div>
+    <script>
+        let decreasing=document.getElementById("dec");
+        let increasing=document.getElementById("inc");
+        let reseting=document.getElementById("res");
+        let input=document.getElementById("display");
+        let count=0;
+        decreasing.addEventListener("click",function(){
+          count--;
+         input.textContent=count;
+        });
+
+        increasing.addEventListener("click",function(){
+        count++;
+        input.textContent=count;
+        });
+        
+        reseting.addEventListener("click",function(){
+            count=0;
+          input.textContent=count;
+        });
+
+
+
+    </script>
+</body>
+</html>

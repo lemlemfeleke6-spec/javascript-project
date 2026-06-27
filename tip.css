@@ -1,0 +1,9 @@
+*{
+    margin:0;
+    padding: 50px;
+    background: linear-gradient(70deg,brown,gold);
+}
+#container{
+    background: linear-gradient(70deg,brown,gold);
+    padding: 33px;
+}

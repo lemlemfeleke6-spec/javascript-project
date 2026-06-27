@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tip calculator</title>
+
+    <link rel="stylesheet" href="tip.css">
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+    <div id="container">
+        <input type="number" id="tip" placeholder="Tip">
+    <input type="number" id="bill" placeholder="Bill">
+    </div>
+    <button id="tBtn">calculate</button>
+    <p>Tip </p>
+    <p id="disTip"></p>
+    <h3>total</h3>
+    <p id="disTot"></p>
+    <script>
+        let tipIn=document.getElementById("tip");
+        let billIn=document.getElementById("bill");
+        let cBtn=document.getElementById("tBtn");
+        let display1=document.getElementById("disTip");
+        let display2=document.getElementById("disTot");
+    
+        cBtn.addEventListener("click",function(){
+            let billIn=Number(bill.value);
+            let tipIn=Number(tip.value);
+            
+            if(billIn==0 && tipIn==0){
+                alert("divide by 0 error");
+            }
+            else {
+                let tipp=billIn*(tipIn/100);
+            let totall=Number((tipIn) + (tipp));
+            display1.textContent=tipp;
+            display2.textContent=totall;
+            }
+            
+        });
+    </script>
+</body>
+</html>

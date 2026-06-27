@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI project</title>
+    <link rel="stylesheet" href="BMI.css">
+</head>
+<body>
+    <H1 id="t">BMI calculator in java Script</H1>
+    <div id="container">
+        <div id="inputBox">
+            <input type="number" id="height" placeholder="enter height here">
+    <input type="number" id="weight" placeholder="enter weight here">
+        </div>
+        <button onclick="addBmi()"id="bmiBtn">calculte BMI</button>
+         <h2 id="result"></h2>
+    </div>
+    <script>
+        let heightInput=document.getElementById("height");
+        let weightInput=document.getElementById("weight");
+        let bmiresult=document.getElementById("result");
+      
+        function addBmi(){
+            let h=Number(heightInput.value);
+            let w=Number(weightInput.value);
+            let bmi=w/(h*h);
+            if(bmi>18.5 &&bmi<24.9){
+
+            bmiresult.innerHTML=`Your BMI is ${bmi.toFixed(1)}(normal)`;
+
+                        }
+                        else if(bmi<18.5){
+                            bmiresult.innerHTML=`Your BMI is ${bmi.toFixed(1)}(UnderWeight)`;
+                        }
+                        else if(bmi>24.9 && bmi<30){
+                            bmiresult.innerHTML=`Your BMI is ${bmi.toFixed(1)}(over weighted)`;
+                        }
+                        
+                        
+                        
+                        else{
+                            bmiresult.innerHTML="Obese";
+                        }
+                        
+                    }
+    </script>
+    
+</body>
+</html>
